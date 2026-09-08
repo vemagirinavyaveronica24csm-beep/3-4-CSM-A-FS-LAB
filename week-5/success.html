@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Placement Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        .success-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 250px);
+            padding: 40px 20px;
+        }
+        .main-card {
+            width: 100%;
+            max-width: 750px;
+            background: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+        .main-card h2 {
+            color: #2e7d32; 
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        .main-card h3 {
+            color: #203a43; 
+            margin-bottom: 15px;
+        }
+        .success-msg {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .notice-card {
+            background: #fff8e1; 
+            border-left: 5px solid #ffb300;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+        .notice-card h4 {
+            color: #0f2027;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .notice-card ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .notice-card ul li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #334155;
+        }
+        .notice-card ul li:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+    <script>
+    let timer;
+    function setTimer() {
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            alert("Session expired due to inactivity!");
+            window.location.href = "login.html";
+        }, 10000);
+    }
+    window.onload = setTimer;
+    document.addEventListener("mousemove", setTimer);
+    document.addEventListener("keypress", setTimer);
+    document.addEventListener("click", setTimer);
+    document.addEventListener("scroll", setTimer);
+    document.addEventListener("touchstart", setTimer);
+</script>
+</head>
+<body>
+    <header>
+        <div class="logo-section">
+            <img src="logo.jpeg" alt="College Logo" width="80" height="80">
+            <div class="title">
+                <h1>ANIL NEERUKONDA INSTITUTE OF TECHNOLOGY AND SCIENCES</h1>
+                <h2>Campus Placement Portal</h2>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="companies.html">Companies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="success-container">
+        <article class="main-card">
+            <h2>Registration Successful!</h2>
+            <h3>Welcome to ANITS Central Placement Portal</h3>
+            <p class="success-msg">Congratulations! Your registration has been completed successfully.</p>
+            
+            <article class="notice-card">
+                <h4>Important Notice</h4>
+                <ul>
+                    <li>Please contact the training and placement department regularly for updates.</li>
+                    <li>Stay informed about the latest MCRP.</li>
+                    <li>Check your registered Email ID and placement portal for announcements.</li>
+                    <li>Attend all PPTs, Aptitude training, and Mock Interviews.</li>
+                    <li>Keep your Resume, Academic Docs, and ID card ready before every recruitment process.</li>
+                </ul>
+            </article>
+        </article>
+    </main>
+
+    <footer>
+        <h3>© 2026 ANITS | Department of Training & Placement</h3>
+        <p>Sangivalasa, Visakhapatnam, Andhra Pradesh</p>
+    </footer>
+</body>
+</html>
