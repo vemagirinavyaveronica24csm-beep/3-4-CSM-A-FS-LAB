@@ -1,0 +1,622 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f9fc;
+  color: #1d2939;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  height: 72px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.07);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #087f8c;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #344054;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #087f8c;
+}
+
+.nav-button {
+  text-decoration: none;
+  background: #087f8c;
+  color: white;
+  padding: 11px 18px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.nav-button:hover {
+  background: #056772;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 580px;
+  padding: 80px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  background: linear-gradient(
+    135deg,
+    #eaf8f9,
+    #f7fcfd
+  );
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.welcome {
+  color: #087f8c;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  color: #172b4d;
+}
+
+.hero h1 span {
+  color: #087f8c;
+}
+
+.hero-text {
+  color: #667085;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-button,
+.secondary-button {
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.primary-button {
+  background: #087f8c;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #056772;
+}
+
+.secondary-button {
+  background: white;
+  color: #087f8c;
+  border: 1px solid #087f8c;
+}
+
+
+/* =========================
+   HERO CARD
+========================= */
+
+.hero-card {
+  width: 360px;
+  padding: 45px 30px;
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-icon {
+  font-size: 75px;
+  margin-bottom: 20px;
+}
+
+.hero-card h2 {
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+
+.hero-card > p {
+  color: #667085;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eaecf0;
+  padding-top: 22px;
+}
+
+.card-info div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-info strong {
+  color: #087f8c;
+  font-size: 20px;
+}
+
+.card-info span {
+  color: #667085;
+  font-size: 12px;
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading p {
+  color: #087f8c;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.section-heading h2 {
+  font-size: 36px;
+  color: #172b4d;
+  margin-bottom: 12px;
+}
+
+.section-heading span {
+  color: #667085;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+  padding: 85px 10%;
+  background: white;
+}
+
+.service-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.service-card {
+  flex: 1;
+  padding: 30px 25px;
+  background: #f8fbfc;
+  border: 1px solid #e4eff1;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.service-icon {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: #667085;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   DOCTORS
+========================= */
+
+.doctors {
+  padding: 85px 10%;
+  background: #f5f9fc;
+}
+
+.doctor-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.doctor-card {
+  width: 30%;
+  background: white;
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.doctor-image {
+  width: 100px;
+  height: 100px;
+  background: #e5f6f7;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 55px;
+}
+
+.doctor-card h3 {
+  margin-bottom: 8px;
+}
+
+.doctor-card p {
+  color: #087f8c;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.doctor-card span {
+  color: #667085;
+  font-size: 14px;
+}
+
+
+/* =========================
+   APPOINTMENT SECTION
+========================= */
+
+.appointment-section {
+  padding: 90px 10%;
+  background: white;
+}
+
+.appointment-container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 45px;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid #edf2f4;
+}
+
+.appointment-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.appointment-heading p {
+  color: #087f8c;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.appointment-heading h2 {
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: #172b4d;
+}
+
+.appointment-heading span {
+  color: #667085;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-row {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 22px;
+}
+
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #344054;
+}
+
+.input-group input,
+.input-group select {
+  padding: 13px;
+  border: 1px solid #d0d5dd;
+  border-radius: 7px;
+  outline: none;
+  font-size: 14px;
+  background: white;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #087f8c;
+  box-shadow: 0 0 0 3px rgba(8, 127, 140, 0.1);
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 25px 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+.terms input {
+  width: 16px;
+  height: 16px;
+}
+
+.submit-button {
+  width: 100%;
+  border: none;
+  background: #087f8c;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: #056772;
+}
+
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.success-box {
+  text-align: center;
+  padding: 30px;
+}
+
+.success-icon {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: #e7f7ee;
+  color: #16a05d;
+  font-size: 45px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.success-box h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #172b4d;
+}
+
+.success-box > p {
+  color: #667085;
+  margin-bottom: 5px;
+}
+
+.appointment-details {
+  max-width: 400px;
+  margin: 25px auto;
+  padding: 20px;
+  background: #f5f9fc;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.appointment-details p {
+  margin: 8px 0;
+  color: #475467;
+}
+
+.reset-button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 7px;
+  background: #087f8c;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background: #056772;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #172b4d;
+  color: white;
+  padding: 40px 10%;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+footer > p {
+  color: #b8c2d1;
+  margin: 8px 0;
+}
+
+.contact-info {
+  color: #d0d5dd;
+  margin: 18px 0;
+}
+
+.copyright {
+  font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 60px 7%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-card {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .service-container {
+    flex-direction: column;
+  }
+
+  .doctor-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .doctor-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .appointment-container {
+    padding: 30px 20px;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .nav-button {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .primary-button,
+  .secondary-button {
+    display: block;
+  }
+
+  .section-heading h2 {
+    font-size: 28px;
+  }
+
+  .appointment-heading h2 {
+    font-size: 28px;
+  }
+}
